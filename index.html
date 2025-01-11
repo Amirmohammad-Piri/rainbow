@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://rogo.ir/favicon.ico" type="image/x-icon">
+    <title>My website</title>
+</head>
+<body>
+    <h1 class="title" id="demo">Loading</h1>
+    <div class="loading-circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+<script>
+    let hue = 0;
+    function updateHue() {
+        hue = (hue + 5) % 360;
+        document.documentElement.style.setProperty('--hue', hue);}
+    setInterval(updateHue, 100);
+</script>
+</html>
