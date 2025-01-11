@@ -1,0 +1,46 @@
+:root {
+	--hue: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: hsl(var(--hue), 100%, 85%);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: background-color 0.1s linear;
+}
+.loading-circles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+.circle {
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	margin: 0 10px;
+	animation: breathe 1.2s infinite ease-in-out;
+	background-color: hsl(var(--hue), 100%, 30%);
+	transition: background-color 0.1s linear;
+}
+.circle:nth-child(1) {animation-delay: 0s;}
+.circle:nth-child(2) {animation-delay: 0.2s;}
+.circle:nth-child(3) {animation-delay: 0.4s;}
+.circle:nth-child(4) {animation-delay: 0.6s;}
+.circle:nth-child(5) {animation-delay: 0.8s;}
+@keyframes breathe {
+	0%, 100% {transform: scale(0.8); opacity: 0.3;}
+	50% {transform: scale(1.2); opacity: 1;}
+}
+h1.title {
+	font-family: 'Rimouski';
+	font-size: 60px;
+	color: hsl(var(--hue), 100%, 25%);
+	/*text-align: center;*/
+	display: flex;
+	transition: background-color 0.1s linear;
+}
